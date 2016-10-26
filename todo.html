@@ -7,37 +7,43 @@
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
         crossorigin="anonymous">
+        <link rel="stylesheet" href="datepicker/css/datepicker.css">
         <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
-
         <!-- <script>
             $('document').ready(function() {
                 bindEventAdd()
             })
         </script> -->
         <style media="screen">
+            .dj-todoform {
+                position: relative;
+                height: 574px;
+                /* display: flex; */
+                width: 1119px;
+                margin: 10px;
+            }
             .dj-container {
                 position: relative;
                 display: flex;
             }
-            .background {
-                background: lightblue;
+            img {
                 position: absolute;
-                height: 100%;
                 width: 100%;
-                z-index: -1;
+                height: 100%;
+                border-radius: 10px;
             }
             .input-container {
                 text-align: center;
                 position: relative;
-                border-right-style: solid;
-                border-right-color: cadetblue;
+                /*border-right-style: solid;
+                border-right-color: cadetblue;*/
                 height: 760px;
             }
             .dj-todolist {
                 background: white;
                 margin: 20px;
                 border-radius: 8px;
-                width: 620px;
+                height: 533px;
             }
             .dj-input {
                 margin: 30px;
@@ -45,17 +51,19 @@
                 width: 350px;
                 border-radius: 10px;
                 border: cadetblue solid;
+                display: inline-block;
             }
             #id-button-add {
                 margin: 50px;
                 width: 350px;
+                background: #4a9483;
             }
             #id-button-deleteAll {
                 width: 350px;
             }
             .todo-cell {
                 width: 600px;
-                background: pink;
+                background: #c7ba83;
                 text-align: right;
                 height: 40px;
                 position: relative;
@@ -73,6 +81,7 @@
             }
             .dj-button-edit {
                 width: 60px;
+                background: rgba(110, 115, 117, 0.94);
             }
             .vertical-center {
                 top: 50%;
@@ -86,34 +95,55 @@
                 color: white;
                 text-decoration: line-through;
             }
+            .dj-button-done {
+                background: #568e84;
+            }
+            #date {
+                margin: 47px 0px;
+                display: inline-block;
+            }
+            .datepickerContainer {
+                background: #cabe85;
+                position: absolute;
+                top: 10px;
+                left: 0px;
+            }
+            div.datepicker {
+                background: #dfc89e;
+            }
+            .datepickerBorderL {
+                display: none;
+            }
+            .datepickerBorderR {
+                display: none;
+            }
         </style>
     </head>
     <body>
-        <div class="background"></div>
-        <div class="dj-container">
-            <div class="input-container">
-                <div class="">
-                    <input class="dj-input form-control" type="textarea" value="Halo, plese edit your todos!">
-                </div>
-                <div class="">
-                    <button class="btn btn-info" id="id-button-add">Click Me to Add Todo</button>
-                </div>
-                <div class="">
-                    <button class="btn btn-danger" id="id-button-deleteAll">Click Me to Delete Todo</button>
-                </div>
+        <div class="dj-todoform">
+            <div class="background">
+                <img src="background.jpg" alt="" />
             </div>
-            <div class="dj-todolist">
-                <!-- <div class="todo-cell">
-                    <span class="input-span">ssssss</span>
-                    <span class="current-time">time</span>
-                    <div class="dj-buttons vertical-center">
-                        <button class="dj-button-done btn btn-success">Done</button>
-                        <button class="dj-button-delete btn btn-danger">Delete</button>
-                        <button class="dj-button-edit btn btn-primary">Edit</button>
+            <div class="dj-container">
+                <div class="input-container">
+                    <div class="">
+                        <input class="dj-input form-control"  value="我是大可， 快来使用 todo 待办事件列表应用吧~">
                     </div>
-                </div> -->
+                    <div class="">
+                        <button class="btn btn-info" id="id-button-add">Click Me to Add Todo</button>
+                    </div>
+                    <div class="">
+                        <button class="btn btn-danger" id="id-button-deleteAll">Click Me to Delete Todo</button>
+                    </div>
+                    <div>
+                        <span id="date"></span>
+                    </div>
+                </div>
+                <div class="dj-todolist">
+                </div>
             </div>
         </div>
+        <script src="datepicker/js/datepicker.js"></script>
         <script src="todo.js"></script>
     </body>
 </html>

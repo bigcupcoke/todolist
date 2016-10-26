@@ -1,7 +1,7 @@
 var log = function() {
     console.log.apply(console, arguments)
 }
-
+//  todo 应用
 var templeteTodo = function(todo) {
     var t = `
     <div class="todo-cell">
@@ -40,6 +40,8 @@ var bindEventAdd = function() {
         $('.dj-todolist').append(t)
         todoList.push(todo)
         saveTodos()
+        log(todoList)
+        log(localStorage.todoList)
     })
 }
 
@@ -149,3 +151,15 @@ var __main = function() {
 
 var todoList = []
 __main()
+
+// 调用日历控件
+var implateDatePicker = function() {
+    $('#date').DatePicker({
+        flat: true,
+        date: ['1','1'],
+        calendars: 2,
+        mode: 'range',
+        starts: 1
+    })
+}
+implateDatePicker()
