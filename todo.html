@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>todo待办事件列表</title>
+        <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+        <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+
+        <!-- <script>
+            $('document').ready(function() {
+                bindEventAdd()
+            })
+        </script> -->
+        <style media="screen">
+            .dj-container {
+                position: relative;
+                display: flex;
+            }
+            .background {
+                background: lightblue;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                z-index: -1;
+            }
+            .input-container {
+                text-align: center;
+                position: relative;
+                border-right-style: solid;
+                border-right-color: cadetblue;
+                height: 760px;
+            }
+            .dj-todolist {
+                background: white;
+                margin: 20px;
+                border-radius: 8px;
+                width: 620px;
+            }
+            .dj-input {
+                margin: 30px;
+                height: 80px;
+                width: 350px;
+                border-radius: 10px;
+                border: cadetblue solid;
+            }
+            #id-button-add {
+                margin: 50px;
+                width: 350px;
+            }
+            #id-button-deleteAll {
+                width: 350px;
+            }
+            .todo-cell {
+                width: 600px;
+                background: pink;
+                text-align: right;
+                height: 40px;
+                position: relative;
+                margin: 10px;
+                border-radius: 4px;
+            }
+            .input-span {
+                left: 10px;
+                position: absolute;
+            }
+            .current-time {
+                position: absolute;
+                top: 20px;
+                left: 10px;
+            }
+            .dj-button-edit {
+                width: 60px;
+            }
+            .vertical-center {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .dj-buttons {
+                right: 10px;
+                position: absolute;
+            }
+            .active {
+                color: white;
+                text-decoration: line-through;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="dj-container">
+            <div class="input-container">
+                <div class="">
+                    <input class="dj-input form-control" type="textarea" value="Halo, plese edit your todos!">
+                </div>
+                <div class="">
+                    <button class="btn btn-info" id="id-button-add">Click Me to Add Todo</button>
+                </div>
+                <div class="">
+                    <button class="btn btn-danger" id="id-button-deleteAll">Click Me to Delete Todo</button>
+                </div>
+            </div>
+            <div class="dj-todolist">
+                <!-- <div class="todo-cell">
+                    <span class="input-span">ssssss</span>
+                    <span class="current-time">time</span>
+                    <div class="dj-buttons vertical-center">
+                        <button class="dj-button-done btn btn-success">Done</button>
+                        <button class="dj-button-delete btn btn-danger">Delete</button>
+                        <button class="dj-button-edit btn btn-primary">Edit</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <script src="todo.js"></script>
+    </body>
+</html>
